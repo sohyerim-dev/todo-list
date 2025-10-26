@@ -87,7 +87,6 @@ function getTodoItem(item) {
     up(li);
   });
   upBtnElem.addEventListener('touchend', function () {
-    e.preventDefault();
     const li = this.parentNode;
     up(li);
   });
@@ -97,7 +96,6 @@ function getTodoItem(item) {
     down(li);
   });
   downBtnElem.addEventListener('touchend', function () {
-    e.preventDefault();
     const li = this.parentNode;
     down(li);
   });
@@ -153,7 +151,6 @@ function toggleDone(no) {
 }
 
 function up(li) {
-  e.preventDefault();
   const ul = li.parentNode;
   const prev = li.previousElementSibling;
   if (!prev) return; // 맨 위면 무시
@@ -161,7 +158,6 @@ function up(li) {
 }
 
 function down(li) {
-  e.preventDefault();
   const ul = li.parentNode;
   const next = li.nextElementSibling;
   if (!next) return; // 맨 아래면 무시
