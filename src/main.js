@@ -87,6 +87,7 @@ function getTodoItem(item) {
     up(li);
   });
   upBtnElem.addEventListener('touchend', function () {
+    e.preventDefault();
     const li = this.parentNode;
     up(li);
   });
@@ -96,6 +97,7 @@ function getTodoItem(item) {
     down(li);
   });
   downBtnElem.addEventListener('touchend', function () {
+    e.preventDefault();
     const li = this.parentNode;
     down(li);
   });
