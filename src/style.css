@@ -197,6 +197,7 @@ footer > p {
   }
   section > ul > li {
     gap: 10px;
+    margin-inline: 0;
   }
   .todolist > li > label > input {
     width: 15px;
@@ -210,7 +211,7 @@ footer > p {
   }
   .todolist > li > button:nth-of-type(2),
   .todolist > li > button:nth-of-type(3) {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
