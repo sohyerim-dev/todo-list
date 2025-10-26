@@ -71,16 +71,31 @@ function getTodoItem(item) {
     const no = parentLi.dataset.no;
     removeItem(no);
   });
+  btnElem.addEventListener('touchend', function () {
+    const parentLi = this.parentNode;
+    const no = parentLi.dataset.no;
+    removeItem(no);
+  });
 
   // 완료 토글
   inputElem.addEventListener('click', () => toggleDone(item.id, item.done));
+  inputElem.addEventListener('touchend', () => toggleDone(item.id, item.done));
 
+  // 순서 바꾸기
   upBtnElem.addEventListener('click', function () {
+    const li = this.parentNode;
+    up(li);
+  });
+  upBtnElem.addEventListener('touchend', function () {
     const li = this.parentNode;
     up(li);
   });
 
   downBtnElem.addEventListener('click', function () {
+    const li = this.parentNode;
+    down(li);
+  });
+  downBtnElem.addEventListener('touchend', function () {
     const li = this.parentNode;
     down(li);
   });
@@ -139,18 +154,19 @@ function up(li) {
   const ul = li.parentNode;
   const prev = li.previousElementSibling;
   if (!prev) return; // 맨 위면 무시
-  ul.insertBefore(li, prev); // li를 prev 앞(한 칸 위)으로
+  ul.insertBefore(li, prev);
 }
 
 function down(li) {
   const ul = li.parentNode;
   const next = li.nextElementSibling;
   if (!next) return; // 맨 아래면 무시
-  // next를 li 앞에 두면 li가 한 칸 아래로 내려간 효과
   ul.insertBefore(next, li);
 }
 
+// 추가
 document.querySelector('.add-item').addEventListener('click', add);
+document.querySelector('.add-item').addEventListener('touchend', add);
 document.querySelector('form > input').addEventListener('keyup', handleKeyup);
 
 showList();
