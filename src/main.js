@@ -79,7 +79,10 @@ function getTodoItem(item) {
 
   // 완료 토글
   inputElem.addEventListener('click', () => toggleDone(item.id, item.done));
-  inputElem.addEventListener('touchend', () => toggleDone(item.id, item.done));
+  inputElem.addEventListener('touchend', function () {
+    e.preventDefault();
+    toggleDone(item.id, item.done);
+  });
 
   // 순서 바꾸기
   upBtnElem.addEventListener('click', function () {
