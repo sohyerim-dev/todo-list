@@ -3,22 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>프로젝트 - CSS</title>
+    <title>TODO LIST</title>
     <link rel="icon" href="/vite.svg" />
-    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <h1>Vite + CSS</h1>
-    <ul>
-      <li>컴포넌트를 분리해서 구현해주세요.</li>
-      <li>컴포넌트의 코드 리뷰를 AI를 통해 받은 후 개선해보세요.</li>
-      <li>개선점을 문서화하여 정리해 보세요</li>
-      <li>구현한 컴포넌트를 기반으로 페이지를 만들어주세요.</li>
-      <li>접근성과 성능을 신경써주세요</li>
-      <li>소통하고 화합하며 프로젝트 즐겨주세요.</li>
-      <li>결과보다 과정이 중요합니다.‼️</li>
-    </ul>
+    <div class="todo-app">
+      <header>
+        <h1>TODO LIST</h1>
+      </header>
+
+      <main>
+        <form aria-label="할 일 추가">
+          <label for="todoInput" class="sr-only">할 일 입력</label>
+          <input type="text" id="todoInput" placeholder="할 일을 입력하세요" autofocus autocomplete="off" />
+          <input type="text" style="display: none" />
+          <button type="button" class="add-item">추가</button>
+        </form>
+
+        <section aria-labelledby="todoListTitle">
+          <h2 id="todoListTitle" class="sr-only">할 일 목록</h2>
+          <ul class="todolist">
+            <!-- <li data-no="1">
+              <label>
+                <input type="checkbox" />
+                <span>할 일</span>
+              </label>
+              <button type="button" aria-label="이 항목 삭제">
+                <img src="/public/delete.png" alt="" />
+              </button>
+              <button type=button aria-label="위로 이동">
+                <img src="/public/up.png" alt="">
+              </button>
+              <button type=button aria-label="위로 이동">
+                <img src="/public/down.png" alt="">
+              </button>
+            </li> -->
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>멋쟁이 사자처럼 프론트엔드 부트캠프 15기 - 소혜림</p>
+      </footer>
+    </div>
   </body>
 </html>
