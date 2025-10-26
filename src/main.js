@@ -71,7 +71,7 @@ function getTodoItem(item) {
     const no = parentLi.dataset.no;
     removeItem(no);
   });
-  btnElem.addEventListener('pointerup', function () {
+  btnElem.addEventListener('touchend', function () {
     const parentLi = this.parentNode;
     const no = parentLi.dataset.no;
     removeItem(no);
@@ -79,14 +79,14 @@ function getTodoItem(item) {
 
   // 완료 토글
   inputElem.addEventListener('click', () => toggleDone(item.id, item.done));
-  inputElem.addEventListener('pointerupt', () => toggleDone(item.id, item.done));
+  inputElem.addEventListener('touchend', () => toggleDone(item.id, item.done));
 
   // 순서 바꾸기
   upBtnElem.addEventListener('click', function () {
     const li = this.parentNode;
     up(li);
   });
-  upBtnElem.addEventListener('pointerup', function () {
+  upBtnElem.addEventListener('touchend', function () {
     e.preventDefault();
     const li = this.parentNode;
     up(li);
@@ -96,7 +96,7 @@ function getTodoItem(item) {
     const li = this.parentNode;
     down(li);
   });
-  downBtnElem.addEventListener('pointerup', function () {
+  downBtnElem.addEventListener('touchend', function () {
     e.preventDefault();
     const li = this.parentNode;
     down(li);
@@ -170,7 +170,7 @@ function down(li) {
 
 // 추가
 document.querySelector('.add-item').addEventListener('click', add);
-document.querySelector('.add-item').addEventListener('pointerup', add);
+document.querySelector('.add-item').addEventListener('touchend', add);
 document.querySelector('form > input').addEventListener('keyup', handleKeyup);
 
 showList();
