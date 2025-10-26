@@ -106,7 +106,7 @@ section > ul > li {
   flex-direction: row;
   margin-inline: 10px;
   padding-block: 5px;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
 }
 

@@ -31,21 +31,26 @@ function getTodoItem(item) {
   btnElem.setAttribute('type', 'button');
   btnElem.setAttribute('aria-label', '이 항목 삭제');
   const imgElem = document.createElement('img');
-  imgElem.setAttribute('src', '/public/delete.png');
+  imgElem.setAttribute('src', './delete.png');
   imgElem.setAttribute('alt', '');
+
+  const starBtn = document.createElement('button');
+  starBtn.setAttribute('type', 'button');
+  starBtn.setAttribute('class', 'star');
+  starBtn.setAttribute('aria-label', '중요한 일 체크');
 
   const upBtnElem = document.createElement('button');
   upBtnElem.setAttribute('type', 'button');
   upBtnElem.setAttribute('aria-label', '위로 이동');
   const upImgElem = document.createElement('img');
-  upImgElem.setAttribute('src', '/public/up.png');
+  upImgElem.setAttribute('src', './up.png');
   upImgElem.setAttribute('alt', '');
 
   const downBtnElem = document.createElement('button');
   downBtnElem.setAttribute('type', 'button');
   downBtnElem.setAttribute('aria-label', '아래로 이동');
   const downImgElem = document.createElement('img');
-  downImgElem.setAttribute('src', '/public/down.png');
+  downImgElem.setAttribute('src', './down.png');
   downImgElem.setAttribute('alt', '');
 
   liElem.appendChild(labelElem);
